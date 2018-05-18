@@ -1,3 +1,11 @@
 language: node_js
 node_js: node
 
+deploy:app: powerful-eyrie-63227
+  provider: heroku
+  api_key:
+    secure: rJ03/GXKLbvPV8DD6rMz2R9YUN9Lc4vup23qHUes2oIA6GQ3nFx2zA2NBwLI1wzYhoul4GoPsrc6qEwJsyjbCcPb6PET7bw6LDjVbkkW94FcOyzVLmCtQptsvfpvlpfafTDhKWypXE/oK+wU8NW1C+Gww+0JowZhBF7eJVOCuEf+bxMJcoyWjSvQRA2JNZdeOJ/f1Zocn4IvwsBE5y9CC+O11VOLBO41sj2DCZbGyHc9XMH1bnVHkE0hFNdeJJpqfrQ7tT1+Ggypxs0OzMsRjME1O7fBbDpUVAWCntijg9SvlzGP7U2gLl+pf4XtPv/yAhCYYkTG2a25VKqthsWMXUbNlMEfh4eBRixUPHrMOrpoRWcTW8hrFUyCox/rEWAkIVGf3mQi35xnQkVGDSp1cJo16JAGnts1l0zC2dBWLblD8oXvIOa1vfXSzTq70aLLMTxCYtUB1supNaL+5Z+HGESuSXl1Wc3DwvoHI4UTedMtNJGD/dA8VOsyLCmUEpqYRdc2Es82sp3l69rioKDqIuhF1xUbNrUolFkhiC2oO4znmZLJi5qTs+BMi7hB0AoVp8VgLwHLn48iuEFiI49JvSXi7hl7h2j80vMiblU6b4wPyjahbWdWDgAhA8nmBMsh+X1gEQOQejcbY162T+8NJ+AGnXvn8ln0p3ozKEb5sro=
+  app: node-shopping-list-integration-tests
+  on:
+    repo: Jules323/node-shopping-list-integration-tests
+
