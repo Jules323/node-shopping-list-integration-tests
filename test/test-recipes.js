@@ -24,7 +24,7 @@ describe('Recipes', function() {
 
 	 after(function() {
     return closeServer();
-
+  });
 
 	it('should list items on GET', function() {
 		return chai.request(app)
@@ -45,7 +45,7 @@ describe('Recipes', function() {
 
 
 it('should add a recipe on POST', function() {
-	const newItem = {name:'tea', ingredients:'loose leaf tea', 'boiling water'};
+	const newItem = {name:'tea', ingredients: ['loose leaf tea', 'boiling water']};
 	return chai.request(app)
 		.post('/recipes')
 		.send(newItem)
@@ -61,7 +61,7 @@ it('should add a recipe on POST', function() {
 
 
 it('should update items on PUT', function() {
-	const updateData= {
+	const updateData = {
 		name: 'fee',
 		ingredients: ['fire', 'foo', 'fum']
 	};
@@ -74,10 +74,7 @@ it('should update items on PUT', function() {
 				.send(updateData)
 		})
 		.then(function(res) {
-			expect(res).to.have.status(200);
-			expect(res).to.be.json;
-			expect(res.body).to.be.a('object');
-			expect(res.body).to.deep.equal(updateData);
+			expect(res).to.have.status(204);
 		});
 });
 
@@ -85,15 +82,20 @@ it('should delete items on DELETE', function() {
 	return chai.request(app)
 	.get('/recipes')
 	.then(function(res) {
-		retrun chai.request(app)
+		return chai.request(app)
 			.delete(`/recipes/${res.body[0].id}'`);
-	});
-	.then(Function(res) {
+	})
+	.then(function(res) {
 		expect(res).to.have.status(204);
 	});
  });
 
 });
+
+
+
+
+
 
 
 
