@@ -63,7 +63,7 @@ it('should add a recipe on POST', function() {
 it('should update items on PUT', function() {
 	const updateData = {
 		name: 'fee',
-		ingredients: ['fire', 'foo', 'fum']
+		ingredients: ['fire', 'foo']
 	};
 	return chai.request(app)
 		.get('/recipes')
