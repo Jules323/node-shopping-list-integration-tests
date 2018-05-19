@@ -1,6 +1,5 @@
 language: node_js
 node_js: node
-
 deploy:app: powerful-eyrie-63227
   provider: heroku
   api_key:
@@ -8,4 +7,3 @@ deploy:app: powerful-eyrie-63227
   app: node-shopping-list-integration-tests
   on:
     repo: Jules323/node-shopping-list-integration-tests
-
